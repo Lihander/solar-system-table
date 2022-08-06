@@ -1,0 +1,11 @@
+
+@mixin svg-bg-mask($filename, $color) {
+  mask: url('~@/assets/svgs/#{$filename}.svg') 50% 50% no-repeat;
+  mask-size: contain;
+  background-color: $color;
+}
+
+@mixin svg-bg-colored($filename) {
+  background: url('~@/assets/svgs/#{$filename}.svg') 50% 50% no-repeat;
+  background-size: contain;
+}

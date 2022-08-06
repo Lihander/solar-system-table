@@ -1,0 +1,25 @@
+.base-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 20px;
+  color: var(--c-white);
+  background-color: var(--c-blue);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  transition: $transition-default;
+
+  &--red {
+    background-color: var(--c-red);
+  }
+
+  &--gray {
+    color: var(--c-black);
+    background-color: var(--c-grey);
+  }
+}
