@@ -1,7 +1,8 @@
 <template>
   <div class="home">
+    <h1>Список небесных тел</h1>
     <div class="home__header">
-      <h1>Список небесных тел</h1>
+      <input v-model="search" placeholder="Поиск..." class="base-input home__header_search">
       <button
         class="base-btn home__header_btn"
         @click="addModalShow = true"
@@ -34,7 +35,7 @@
       </select>
       <button :disabled="pageNum === 1" @click="pageNum--"> Предыдущая </button>
       <span>{{ pageNum }}</span>
-      <button @click="pageNum++"> Следующая </button>
+      <button :disabled="bodies.length < pageSize" @click="pageNum++"> Следующая </button>
     </div>
 
     <remove-modal v-model="removeModalShow" :item="currentItem" />
@@ -112,8 +113,13 @@ export default {
   height: 100vh;
 
   &__header {
-    &_btn {
-      margin-bottom: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &_search {
+      width: 300px;
     }
   }
 

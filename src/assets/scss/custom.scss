@@ -23,3 +23,12 @@
     background-color: var(--c-grey);
   }
 }
+
+.base-input {
+  height: 35px;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: 1px solid var(--c-grey);
+  background-color: var(--c-white);
+  outline: none;
+}
